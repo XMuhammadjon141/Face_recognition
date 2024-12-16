@@ -1,22 +1,22 @@
+<!-- templates/add_user.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yangi foydalanuvchi qo'shish</title>
+    <title>Add New User</title>
 </head>
 <body>
-    <h1>Yangi foydalanuvchi qo'shish</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <h1>Add New User</h1>
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label for="name">Ismni kiriting:</label>
+        <label for="name">Enter Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="capture">Suratni yuklash:</label>
+        <label for="capture">Upload or Capture Photo:</label>
         <input type="file" id="capture" name="capture" accept="image/*" required><br><br>
 
-        <button type="submit">Qo'shish</button>
+        <button type="submit">Submit</button>
     </form>
-    <div id="message"></div>
 </body>
 </html>

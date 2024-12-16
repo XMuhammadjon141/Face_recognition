@@ -1,3 +1,4 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +7,9 @@
     <title>Face Recognition</title>
 </head>
 <body>
-    <h1>Face Recognition</h1>
-    <video width="640" height="480" autoplay>
-        <source src="{% url 'video_feed' %}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <form action="{% url 'add_user' %}" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="capture">Upload Image:</label>
-        <input type="file" id="capture" name="capture" required><br><br>
-        <button type="submit">Add User</button>
-    </form>
+    <h1>Face Recognition System</h1>
+    <button onclick="window.location.href='/add_user/'">Add New User</button>
+    <button onclick="window.location.href='/run_face_recognition/'">Start Face Recognition</button>
+    <button onclick="window.location.href='/video_feed/'">Video Feed</button>
 </body>
 </html>
