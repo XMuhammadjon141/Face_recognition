@@ -1,15 +1,110 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Recognition</title>
+    <title>Face Detection</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        h1 {
+            font-size: 45px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+        img {
+            width: 90%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            object-fit: cover;
+        }
+
+        /* Tasvir hover effekti */
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+        }
+
+
+        a {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: #f39c12;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+
+        a:hover {
+            background: #e67e22;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+
+        a:focus {
+            outline: none;
+            background: #e67e22;
+            box-shadow: 0 0 10px 5px rgba(255, 165, 0, 0.7);
+        }
+
+
+        @media (max-width: 800px) {
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Face Recognition System</h1>
-    <button onclick="window.location.href='/add_user/'">Add New User</button>
-    <button onclick="window.location.href='/run_face_recognition/'">Start Face Recognition</button>
-    <button onclick="window.location.href='/video_feed/'">Video Feed</button>
+
+    <h1>Yuzni Aniqlash</h1>
+
+
+    <img src="{% url 'video_feed' %}" alt="Video Feed">
+
+
+    <a href="{% url 'home' %}">Back</a>
+
 </body>
 </html>
