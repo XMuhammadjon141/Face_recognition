@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2196f3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .user-container {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+        .user-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        .user-card h3 {
+            margin-bottom: 20px;
+        }
+        .user-card a {
+            display: block;
+            background-color: #2196f3;
+            color: white;
+            padding: 12px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .user-card a:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Dashboard</h1>
+    </header>
+    <div class="user-container">
+        <div class="user-card">
+            <h3>Welcome User</h3>
+            <p>Start the face recognition process below:</p>
+            <a href="{% url 'face' %}">Start Face Recognition</a>
+        </div>
+    </div>
+</body>
+</html>

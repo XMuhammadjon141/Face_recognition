@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #1976d2;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .message {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            padding: 15px 30px;
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .button-container a:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Face Recognition System</h1>
+    </header>
+    <div class="message">
+        <p>Redirecting based on your role...</p>
+    </div>
+    <div class="button-container">
+        <a href="{% url 'admin_page' %}">Go to Admin Dashboard</a>
+        <a href="{% url 'user_page' %}">Go to User Dashboard</a>
+    </div>
+</body>
+</html>
